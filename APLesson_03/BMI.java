@@ -1,32 +1,18 @@
-import java.util.Scanner; //import Statement
+import java.util.Scanner;
 
 public class BMI
 {
 	public static void main(String[]args)
 	{
-		//instantiate the new Scanner object "keyboard"
-		Scanner keyboard = new Scanner(System.in);
-		
-		//prompt for user input
-		System.out.println("What is your hieght? ");
-		
-		String hieght = keyboard.next();
-		
-		System.out.println("Great " + hieght + " is about average," );
-		
-		//prompt for user input
-		System.out.println("What is your weight? ");
-		
-		String weight = keyboard.next();
-		
-		System.out.println("Great " + weight + " is decent," );
-		
-		int w = 180;
-		int h = 70;
-		int BmI = (703 * w) / (h * h);
-		
-		System.out.println("Your BMI is" + BmI);
-		
-		
+		//creates Scanner named sc
+		Scanner sc = new Scanner(System.in);
+		//asks for user's height and weight
+		System.out.print("Enter your height in inches: ");
+		double height = sc.nextDouble();
+		System.out.print("Enter your weight in pounds: ");
+		double weight = sc.nextDouble();
+		//calculates BMI and prints it
+		double BMI = 703*weight/(height*height);
+		System.out.println("Your BMI is "+BMI+".");
 	}
 }
