@@ -19,9 +19,9 @@ public class Lab_05ex2
 	}
 	public static void main(String[]args)
 	{
-		//creates Scanner sc
+		
 		Scanner sc = new Scanner(System.in);
-		//takes input for 4 items and their prices
+		
 		System.out.print("Enter item 1: ");
 		String i1 = sc.nextLine();
 		System.out.print("Enter price of item 1: ");
@@ -42,14 +42,14 @@ public class Lab_05ex2
 		System.out.print("Enter price of item 4: ");
 		double p4 = sc.nextDouble();
 		sc.nextLine();
-		//calculates subtotal
+		
 		double subtotal = p1+p2+p3+p4;
-		//gets discount
+		
 		double discount = discount(subtotal);
-		//calculates tax and total
+		
 		double tax = subtotal*0.07;
 		double total = subtotal - discount + tax;
-		//prints receipt
+		
 		System.out.println("<<<<<<<<<<< Receipt >>>>>>>>>>>>>>");
 		format(i1,p1);
 		format(i2,p2);
