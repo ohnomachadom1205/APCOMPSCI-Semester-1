@@ -12,12 +12,12 @@ public class CircleEx8
 	}
 	public static void main(String[]args)
 	{
-		//creates Scanner sc
+		
 		Scanner sc = new Scanner(System.in);
-		//takes user input
+		
 		System.out.print("Enter radius: ");
 		double r = sc.nextDouble();
-		//prints area
+		
 		double area = calcArea(r);
 		print(r,area);
 	}

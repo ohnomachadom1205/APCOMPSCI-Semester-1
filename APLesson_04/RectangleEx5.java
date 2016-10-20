@@ -12,14 +12,14 @@ public class RectangleEx5
 	}
 	public static void main(String[]args)
 	{
-		//creates Scanner sc
+		
 		Scanner sc = new Scanner(System.in);
-		//takes user input
+		
 		System.out.print("Enter length: ");
 		double l = sc.nextDouble();
 		System.out.print("Enter width: ");
 		double w = sc.nextDouble();
-		//prints perimeter
+		
 		double perimeter = calcPerim(l,w);
 		print(perimeter);
 	}

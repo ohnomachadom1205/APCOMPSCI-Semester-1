@@ -12,12 +12,12 @@ public class CubeEx7
 	}
 	public static void main(String[]args)
 	{
-		//creates Scanner sc
+		
 		Scanner sc = new Scanner(System.in);
-		//takes user input
+		
 		System.out.print("Enter side length: ");
 		double side = sc.nextDouble();
-		//prints surface area
+		
 		double sa = calcSurf(side);
 		print(side,sa);
 	}

@@ -17,16 +17,16 @@ public class AverageEx2
 	}
 	public static void main(String[]args)
 	{
-		//creates Scanner sc
+		
 		Scanner sc = new Scanner(System.in);
-		//takes user input
+		
 		System.out.print("Enter num1: ");
 		num1 = sc.nextDouble();
 		System.out.print("Enter num2: ");
 		num2 = sc.nextDouble();
 		System.out.print("Enter num3: ");
 		num3 = sc.nextDouble();
-		//prints average
+		
 		average();
 		print();
 	}
