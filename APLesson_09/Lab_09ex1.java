@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Lab_09ex1
 {
-	public static void Reverse(String[] array)
+	public static void reverse(String[] array)
 	{
-		System.out.print("In Reverse... ");
+		System.out.print("In reverse... ");
 		for(int i = array.length-1; i >=0; i--)
 		{
 			System.out.print(array[i] + " ");
@@ -30,6 +30,6 @@ public class Lab_09ex1
 		}
 		System.out.println();
 		
-		Reverse(words);
+		reverse(words);
 	}
 }

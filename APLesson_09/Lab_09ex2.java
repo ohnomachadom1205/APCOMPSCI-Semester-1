@@ -4,7 +4,7 @@ public class Lab_09ex2
 {
 	public static void first(String[] array)
 	{
-		System.out.print("First letter of each word inputted: ");
+		System.out.print("The first letter of each word you put: ");
 		for(String word : array)
 		{
 			System.out.print(word.charAt(0) + " ");
