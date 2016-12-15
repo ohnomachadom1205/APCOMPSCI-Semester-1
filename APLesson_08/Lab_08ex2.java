@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Lab_08ex2
 {
-	public static String theCenter(String word)
+	public static String makeCenter(String word)
 	{
 		if(word.length() >= 20)
 		{
@@ -10,7 +10,7 @@ public class Lab_08ex2
 		}
 		else
 		{
-			return Center(" " + word + " ");
+			return makeCenter(" " + word + " ");
 		}
 	}
 	public static void main(String[]args)
@@ -25,8 +25,8 @@ public class Lab_08ex2
 		System.out.print("Enter the third word: ");
 		String w3 = sc.next();
 		
-		System.out.println(theCenter(w1));
-		System.out.println(theCenter(w2));
-		System.out.println(theCenter(w3));
+		System.out.println(makeCenter(w1));
+		System.out.println(makeCenter(w2));
+		System.out.println(makeCenter(w3));
 	}
 }
