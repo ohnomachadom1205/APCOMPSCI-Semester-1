@@ -1,10 +1,9 @@
 public class ToyRunner
 {
 	public static void main(String[]args){
-		String toys = "Hotwheel, Car, G.I.Joe, AF, PennyRacer, Car, Matchbox, Car, Star Wars, AF, Pullback, Car, Star Wars, AF";
-		ToyStore ts = new ToyStore(toys);
-		System.out.println("List...\n" + toys + "\n" + ts + "\n");
-		System.out.println("Most Frequent Toy: " + ts.getMostFrequentToy());
-		System.out.println("Most Frequent Type of Toy: " + ts.getMostFrequentType());
+		AFigure af = new AFigure("action figure");
+		Car c = new Car("car");
+		
+		System.out.println(af + "\n" + c);
 	}
 }
