@@ -1,3 +1,4 @@
+
 public class Car implements Location
 {
 	public final int ID;
