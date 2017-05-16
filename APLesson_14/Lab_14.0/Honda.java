@@ -1,22 +1,27 @@
+import java.util.Random;
 public class Honda implements Location
 {
 	private double[] location;
-	private int ID;
 	
-	public Honda(double[] loc){
-		location = loc;
+	public Honda(double[] location)
+	{
+		this.location = location;
 	}
-	public int getID(){
-		if(ID == 0){
-			ID = (int)(Math.random()*1000000) + 1;
-		}
-		return ID;
+	
+	public int getID()
+	{
+		Random rng = new Random();
+		return 100000+rng.nextInt(900000);
 	}
-	public void move(double x, double y){
-		location[0] += x;
-		location[1] += y;
+	
+	public void move(int x, int y)
+	{
+		location[1] = x;
+		location[2] = y;
 	}
-	public double[] getLoc(){
+	
+	public double[] getLoc()
+	{
 		return location;
 	}
 }

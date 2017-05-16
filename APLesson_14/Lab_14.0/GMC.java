@@ -1,24 +1,32 @@
+import java.util.Random;
 public class GMC implements Location
 {
-	private double x, y;
-	private int ID;
+	private int x;
+	private int y;
 	
-	public GMC(double x, double y){
+	public GMC(int x, int y)
+	{
 		this.x = x;
 		this.y = y;
 	}
-	public int getID(){
-		if(ID == 0){
-			ID = (int)(Math.random()*1000000) + 1;
-		}
-		return ID;
+	
+	public int getID()
+	{
+		Random rng = new Random();
+		return 100000+rng.nextInt(900000);
 	}
-	public void move(double x, double y){
-		this.x += x;
-		this.y += y;
+	
+	public void move(int x, int y)
+	{
+		this.x = x;
+		this.y = y;
 	}
-	public double[] getLoc(){
-		double[] location = {x, y};
-		return location;
+	
+	public double[] getLoc()
+	{
+		double[] loc = new double[2];
+		loc[0] = x;
+		loc[1] = y;
+		return loc;
 	}
 }

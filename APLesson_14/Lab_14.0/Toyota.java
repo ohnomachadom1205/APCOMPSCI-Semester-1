@@ -1,26 +1,30 @@
+import java.util.Random;
 public class Toyota implements Location
 {
 	private double[] location;
-	private int ID;
-	
-	public Toyota(String coords){
+	public Toyota(String coords)
+	{
+		double[] loc = new double[2];
 		String[] c = coords.split(", ");
-		location = new double[2];
-		for(int i = 0; i < 2; i++){
-			location[i] = Double.parseDouble(c[i]);
-		}
+		loc[0] = Double.parseDouble(c[0]);
+		loc[1] = Double.parseDouble(c[1]);
+		
+		this.location = loc;
 	}
-	public int getID(){
-		if(ID == 0){
-			ID = (int)(Math.random()*1000000) + 1;
-		}
-		return ID;
+	public int getID()
+	{
+		Random rng = new Random();
+		return 100000+rng.nextInt(900000);
 	}
-	public void move(double x, double y){
-		location[0] += x;
-		location[1] += y;
+	
+	public void move(int x, int y)
+	{
+		location[1] = x;
+		location[2] = y;
 	}
-	public double[] getLoc(){
+	
+	public double[] getLoc()
+	{
 		return location;
 	}
 }

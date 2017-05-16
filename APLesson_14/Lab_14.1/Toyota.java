@@ -1,9 +1,14 @@
+import java.util.Random;
 public class Toyota extends Car
 {
-	public Toyota(String coords){
+	public Toyota(String coords)
+	{
+		super();
+		double[] loc = new double[2];
 		String[] c = coords.split(", ");
-		for(int i = 0; i < 2; i++){
-			location[i] = Double.parseDouble(c[i]);
-		}
+		loc[0] = Double.parseDouble(c[0]);
+		loc[1] = Double.parseDouble(c[1]);
+		
+		this.location = loc;
 	}
 }
