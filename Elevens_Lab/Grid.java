@@ -30,9 +30,9 @@ public Grid(int size) {
 public void addStone(int row, int col, State state) {
     Stone newStone = new Stone(row, col, state);
     stones[row][col] = newStone;
-    // Check neighbors
+    
     Stone[] neighbors = new Stone[4];
-    // Don't check outside the board
+    
     if (row > 0) {
         neighbors[0] = stones[row - 1][col];
     }
@@ -45,10 +45,10 @@ public void addStone(int row, int col, State state) {
     if (col < SIZE - 1) {
         neighbors[3] = stones[row][col + 1];
     }
-    // Prepare Chain for this new Stone
+    
     Chain finalChain = new Chain(newStone.state);
     for (Stone neighbor : neighbors) {
-        // Do nothing if no adjacent Stone
+        
         if (neighbor == null) {
             continue;
         }
@@ -56,7 +56,7 @@ public void addStone(int row, int col, State state) {
         newStone.liberties--;
         neighbor.liberties--;
 
-        // If it's different color than newStone check him
+        
         if (neighbor.state != newStone.state) {
             checkStone(neighbor);
             continue;
@@ -75,7 +75,7 @@ public void addStone(int row, int col, State state) {
  * @param stone
  */
 public void checkStone(Stone stone) {
-    // Every Stone is part of a Chain so we check total liberties
+    
     if (stone.chain.getLiberties() == 0) {
         for (Stone s : stone.chain.stones) {
             s.chain = null;
@@ -108,7 +108,7 @@ public State getState(int row, int col) {
     if (stone == null) {
         return null;
     } else {
-        // System.out.println("getState != null");
+        
         return stone.state;
     }
 }

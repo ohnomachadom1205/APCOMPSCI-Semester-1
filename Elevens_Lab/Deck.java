@@ -61,7 +61,7 @@ public class Deck {
      * and reset the size to represent the entire deck.
      */
     public void shuffle() {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+        
     }
 
     /**
@@ -93,7 +93,7 @@ public class Deck {
                 rtn = rtn + ", ";
             }
             if ((size - k) % 2 == 0) {
-                // Insert carriage returns so entire deck is visible on console.
+                
                 rtn = rtn + "\n";
             }
         }
@@ -105,7 +105,7 @@ public class Deck {
                 rtn = rtn + ", ";
             }
             if ((k - cards.size()) % 2 == 0) {
-                // Insert carriage returns so entire deck is visible on console.
+                
                 rtn = rtn + "\n";
             }
         }

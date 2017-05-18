@@ -18,7 +18,7 @@ public class DeckTester {
         int[] v2 = {11, 12, 13, 1};
         int[] v3 = {3, 5};
         
-        //first deck
+        
         System.out.println("First deck...");
         Deck d1 = new Deck(r1, s1, v1);
         System.out.println("Empty: " + d1.isEmpty());
@@ -26,7 +26,7 @@ public class DeckTester {
         System.out.println("Dealt 1 card: " + d1.deal());
         System.out.println(d1);
         
-        //second deck
+        
         System.out.println("Second deck...");
         Deck d2 = new Deck(r2, s2, v2);
         System.out.println("Dealing 2 cards...");
@@ -36,7 +36,7 @@ public class DeckTester {
         System.out.println("Size: " + d2.size());
         System.out.println(d2);
         
-        //third deck
+        
         System.out.println("Third deck...");
         Deck d3 = new Deck(r3, s3, v3);
         System.out.println("Dealing 4 cards...");
