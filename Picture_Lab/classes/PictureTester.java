@@ -1,4 +1,3 @@
-
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -109,6 +108,37 @@ public class PictureTester
 	beach.explore();
   }
   
+  public static void testMirrorArms() {
+	Picture snowman = new Picture("snowman.jpg");
+	snowman.mirrorArms();
+	snowman.explore();
+  }
+  
+  public static void testMirrorGull() {
+	Picture seagull = new Picture("seagull.jpg");
+	seagull.mirrorGull();
+	seagull.explore();
+  }
+  
+  public static void testCopy() {
+	Picture seagull = new Picture("seagull.jpg");
+	Picture blank = new Picture("640x480.jpg");
+	blank.copy(seagull, 0, 0, 227, 330, 228, 348);
+	blank.explore();
+  }
+  
+  public static void testMyCollage() {
+	Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
+  
+  public static void testEdgeDetection2() {
+    Picture swan = new Picture("swan.jpg");
+	swan.edgeDetection2(10);
+	swan.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -130,10 +160,11 @@ public class PictureTester
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    testMirrorDiagonal();
+    //testMirrorDiagonal();
     //testCollage();
+	//testMyCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
